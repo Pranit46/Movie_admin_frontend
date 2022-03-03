@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 import env from "react-dotenv";
-import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 
 function AddTheater() {
-  let navigate = useNavigate();
   // const params = useParams();
   let [tid, setTid] = useState("");
   let [showScreen, setshowScreen] = useState([]);

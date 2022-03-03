@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import env from "react-dotenv";
-import { useNavigate, useParams } from "react-router-dom";
+import {  useParams } from "react-router-dom";
 import axios from "axios";
 
 function ShowTime() {
-  let navigate = useNavigate();
   const params = useParams();
   let [showTime, setShowTime] = useState([]);
   let [scid, setscid] = useState("");

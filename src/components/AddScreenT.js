@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import env from "react-dotenv";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function AddScreenT() {
   let [showTheatre, setTheatres] = useState([]);
   let navigate = useNavigate();
-  let [theatreName, setThreatreName] = useState("");
 
   const getTheatre = async () => {
     let res = await axios.get(`${env.API_URL}/theatre/getTheatres`);
@@ -35,7 +34,6 @@ function AddScreenT() {
                     className="btn btn-primary"
                     onClick={() => {
                       navigate(`/addScreen/${e.tid}/${e.name}`);
-                      setThreatreName(e.name);
                       //   <Link to={`/addScreen/${e._id}`} value={theatreName}></Link>
                     }}
                   >
