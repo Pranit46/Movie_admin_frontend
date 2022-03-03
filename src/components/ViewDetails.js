@@ -18,7 +18,7 @@ function ViewDetails() {
   // Add/Remove checked item from list
   useEffect(() => {
     getTheatre();
-  }, []);
+  });
 
   return (
     <>
